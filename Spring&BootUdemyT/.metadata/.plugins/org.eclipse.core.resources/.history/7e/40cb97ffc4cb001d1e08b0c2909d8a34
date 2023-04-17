@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit"></bean> By /default singleTon scope--> 
+<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype"></bean> -->
+	<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype">
+	<property name="age" value="30"></property> by default age is 30, and it called the setAge Method
+	</bean> -->
+	<bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype">
+	<property name="age" value="30" ></property> <!-- Give ref to another object -->
+	<property name="laptop" ref="laptop"></property>
+	</bean>
+	<bean id="laptop" class="com.spring.CoreSpring_1.MyLaptop">
+	</bean>
+
+</beans>

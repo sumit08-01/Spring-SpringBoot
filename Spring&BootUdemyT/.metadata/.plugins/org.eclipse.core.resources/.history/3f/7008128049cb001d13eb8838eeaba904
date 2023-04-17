@@ -1,0 +1,28 @@
+package com.spring.CoreSpring_1;
+
+import java.beans.beancontext.BeanContext;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+//    	BeanFactory factory= new XmlBeanFactory(new FileSystemResource("config.xml")); // This class is depericated and we have a another class
+    	ApplicationContext factory = new ClassPathXmlApplicationContext("config.xml"); // we have to move are .xml file in class path(same folder as the class present)
+    	
+       Sumit obj1 = (Sumit) factory.getBean("sumit");
+       obj1.coding();
+//       obj1.age;
+       System.out.println(obj1.age);
+       
+    }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 1-> SingleTon  -->
+	<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit"></bean> By /default singleTon scope--> 
+	
+	<!-- 2-> Prototype  -->
+	<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype"></bean> -->
+
+	<!-- 3-> prototype with setter Injection, Injection value in class instance  -->
+	<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype">
+		<property name="age" value="30"></property> by default age is 30, and it called the setAge Method
+	</bean> -->
+	
+	<!-- 4-> protype with setter Injection, Injection value in class instance  and reference of another bean(object) -->
+	<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype">
+		<property name="age" value="30" ></property> Give ref to another object
+		<property name="laptop" ref="laptop"></property> This is setter injection
+	</bean> -->
+	
+	<!-- 4-> This is the bean which is ref to sumit bean  -->
+	<!-- <bean id="laptop" class="com.spring.CoreSpring_1.MyLaptop"></bean> This bean is assign to another bean -->
+	
+	
+	<!-- 5-> Constructor Injection, Injection value through constructor -->
+	<!-- <bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype">
+		<constructor-arg value="14"></constructor-arg>
+	</bean>  -->
+	
+	<bean id="sumit" class="com.spring.CoreSpring_1.Sumit" scope="prototype" autowire="byName">
+		<property name="age" value="12"></property>
+	</bean> 
+	
+	<bean id="com" class="com.spring.CoreSpring_1.MyLaptop"></bean>
+	<bean id="desktop" class="com.spring.CoreSpring_1.Desktop"></bean>
+	
+	
+	
+	
+
+</beans>

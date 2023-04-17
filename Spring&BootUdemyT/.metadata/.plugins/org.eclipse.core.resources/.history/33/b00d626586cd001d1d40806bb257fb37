@@ -1,0 +1,10 @@
+
+
+spring.mvc.view.prefix=/view/
+#give path of the file
+
+spring.mvc.view.suffix=.jsp
+#give the .extention of the file
+
+
+spring.jap.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect

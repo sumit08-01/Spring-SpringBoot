@@ -1,0 +1,8 @@
+package com.spring.CoreSpring_1;
+
+public class MyLaptop {
+	
+	public void compile() {
+		System.out.println("laptop Compile");
+	}
+}

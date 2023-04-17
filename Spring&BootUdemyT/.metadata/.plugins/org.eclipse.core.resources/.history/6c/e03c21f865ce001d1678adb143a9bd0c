@@ -1,0 +1,35 @@
+2023-03-30T00:41:53.604+05:30  INFO 17516 --- [restartedMain] com.spring.mvc.SpringMvc2Application     : Starting SpringMvc2Application using Java 17.0.4.1 with PID 17516 (C:\My Folder\Eclipse\LearningSpring\SpringBootAOP-5\target\classes started by sumit in C:\My Folder\Eclipse\LearningSpring\SpringBootAOP-5)
+2023-03-30T00:41:53.605+05:30  INFO 17516 --- [restartedMain] com.spring.mvc.SpringMvc2Application     : No active profile set, falling back to 1 default profile: "default"
+2023-03-30T00:41:53.705+05:30  INFO 17516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-30T00:41:53.711+05:30  INFO 17516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2023-03-30T00:41:53.769+05:30  INFO 17516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-30T00:41:53.770+05:30  INFO 17516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-30T00:41:53.770+05:30  INFO 17516 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-03-30T00:41:53.805+05:30  INFO 17516 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-03-30T00:41:53.806+05:30  INFO 17516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-30T00:41:53.806+05:30  INFO 17516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 200 ms
+2023-03-30T00:41:53.811+05:30  INFO 17516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-03-30T00:41:53.814+05:30  INFO 17516 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:testdb user=SA
+2023-03-30T00:41:53.814+05:30  INFO 17516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-03-30T00:41:53.814+05:30  INFO 17516 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-03-30T00:41:53.827+05:30  INFO 17516 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-30T00:41:53.831+05:30  INFO 17516 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-03-30T00:41:53.845+05:30  INFO 17516 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-30T00:41:53.846+05:30  INFO 17516 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-30T00:41:53.895+05:30  WARN 17516 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-30T00:41:53.934+05:30  INFO 17516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-30T00:41:53.942+05:30  INFO 17516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-30T00:41:53.944+05:30  INFO 17516 --- [restartedMain] com.spring.mvc.SpringMvc2Application     : Started SpringMvc2Application in 0.367 seconds (process running for 936.276)
+2023-03-30T00:41:53.945+05:30  INFO 17516 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-03-30T00:41:59.993+05:30  INFO 17516 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-30T00:41:59.993+05:30  INFO 17516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-30T00:41:59.993+05:30  INFO 17516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-03-30T00:41:59.995+05:30  INFO 17516 --- [http-nio-8080-exec-1] c.spring.mvc.controller.LoggingAspect    : getAllEmployee Method called
+2023-03-30T00:42:29.873+05:30  INFO 17516 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-03-30T00:42:29.886+05:30  INFO 17516 --- [Thread-24] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-30T00:42:29.887+05:30  INFO 17516 --- [Thread-24] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-30T00:42:29.889+05:30  INFO 17516 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-30T00:42:29.889+05:30  INFO 17516 --- [Thread-24] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-03-30T00:42:30.104+05:30  WARN 17516 --- [Thread-24] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-03-30T00:42:30.104+05:30  INFO 17516 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-03-30T00:42:30.106+05:30  INFO 17516 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.

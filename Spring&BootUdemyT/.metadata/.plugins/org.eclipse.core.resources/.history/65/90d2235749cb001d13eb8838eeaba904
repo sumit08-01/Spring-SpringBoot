@@ -1,0 +1,14 @@
+package com.spring.CoreSpring_1;
+
+public class Sumit {
+	
+	public Sumit() {
+		System.out.println("Sumit class constructor called mean spring creating the object of that class, even if we don't need, because spring responsibility to created object of the class");
+	}
+
+	public void coding() {
+		System.out.println("Sumit Coding");
+	}
+
+	
+}

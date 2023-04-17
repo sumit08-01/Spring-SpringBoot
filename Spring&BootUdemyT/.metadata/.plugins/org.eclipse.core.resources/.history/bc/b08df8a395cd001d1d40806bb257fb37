@@ -1,0 +1,125 @@
+package com.spring.mvc.controller;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.spring.mvc.EmployeeRepo;
+import com.spring.mvc.model.Employee;
+
+import jakarta.annotation.PostConstruct;
+
+@Controller
+public class HomeController {
+
+	@Autowired(required = true)
+	EmployeeRepo employeeRepo;
+	
+	@PostConstruct
+	public void addEmployee() {
+		List<Employee> employees = Arrays.asList(new Employee(101, "sumit"), new Employee(102, "sourabh"));
+		employeeRepo.saveAll(employees);
+	}
+	
+	@ModelAttribute // Before calling any method this method is called
+	public void methodAttribut(Model m) {
+		m.addAttribute("name", "sumit");
+	}
+	
+	@RequestMapping("/")
+	public String home() {
+		System.out.println("Home page called");
+//		return "index.jsp";
+//		return "index"; // .jsp extention from .properties file
+		return "Employee"; // .jsp extention from .properties file
+	}
+	
+	@RequestMapping("/add")
+	public String add(@RequestParam("num1") int i, @RequestParam("num2") int j, ModelMap m) { // 4nd --> way
+//	public String add(@RequestParam("num1") int i, @RequestParam("num2") int j, Model m) { // 4nd --> way
+//		public ModelAndView add(@RequestParam("num1") int i, @RequestParam("num2") int j) { // 3nd --> way
+//	public String add(@RequestParam("num1") int i, @RequestParam("num2") int j,  HttpSession httpSession) { // 1st % 2nd --> way
+		
+// Sending data from controller to view
+		
+// First way --> 
+		
+		/*
+		 * HttpServletRequest -->> according to this
+		 * int int1 = Integer.parseInt(httpServletRequest.getParameter("num1")) ; int
+		 * int2 = Integer.parseInt(httpServletRequest.getParameter("num2")) ; int num3 =
+		 * int1 + int2; HttpSession httpSession = httpServletRequest.getSession();
+		 * httpSession.setAttribute("num3", num3);
+		 */
+	
+		
+	//Second way --> 
+		
+//		int num3 = i+j;
+//		httpSession.setAttribute("num3", num3);
+		
+		// But in Both way we want httpSession object to send the data from controler to view
+		
+		
+// Third way -->> Through ModelAndView object
+		
+//		ModelAndView mv = new ModelAndView();
+//		ModelAndView mv = new ModelAndView("result"); // you can also send view like this
+//		mv.setViewName("result.jsp");
+//		mv.setViewName("result"); // /.jsp extention from .properties file
+//		int num3 = i+j;
+//		mv.addObject("num3", num3);
+//		return "result.jsp?num3 = "+num3; //this is a why of sending data from controler to view
+//		return mv; 
+		
+		
+// Forth way -->If you want to return String view insted of modelAndView you can you this 
+		
+//		int num3 = i+j;
+//		m.addAttribute("num3",num3);
+//		return "result";
+		
+// 5th way --> You can go also with the ModelMap, it's same as Model but, In Model you can add a simple object but in ModelMap you can send the in the form of Map Format
+		int num3 = i+j;
+		m.addAttribute("num3",num3);
+		return "result";
+	}
+	
+	
+//@ModelAttribute : If you have more data from view can’t go with @RequestParam, instead you this you can you ModelAttribute.
+	@RequestMapping("addEmployee")
+//	public String addEmployee(@ModelAttribute("emp") Employee emp, Model m ) { // 1st wat 
+		public String addEmployee(@ModelAttribute Employee emp, Model m ) { // emplpoyee // 2nd way
+//		public String addEmployee(Employee emp) { // emplpoyee // 3rd way
+//		m.addAttribute(emp);
+		return "result";
+	}
+	
+	@GetMapping("/getemp")
+	private String getEmployees() {
+		System.out.println(employeeRepo.findAll());
+		return "result";
+	}
+	
+	@GetMapping("/getemp/{id}")
+	private String getEmployeeById(@PathVariable int id) {
+		System.out.println(employeeRepo.findById(id));
+		return "result";
+	}
+	
+	@GetMapping("/getemps/{name}")
+	private String getEmployeeByName(@PathVariable String name) {
+		System.out.println(employeeRepo.findByName(name));
+		return "result";
+	}
+	
+}

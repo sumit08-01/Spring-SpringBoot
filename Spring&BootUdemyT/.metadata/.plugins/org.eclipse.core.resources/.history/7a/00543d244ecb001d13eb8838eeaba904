@@ -1,0 +1,49 @@
+package com.spring.CoreSpring_1;
+
+import java.beans.beancontext.BeanContext;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+//    	BeanFactory factory= new XmlBeanFactory(new FileSystemResource("config.xml")); // This class is depericated and we have a another class
+		ApplicationContext factory = new ClassPathXmlApplicationContext("config.xml"); // we have to move are .xml file
+																						// in class path(same folder as
+																						// the class present)
+
+//		Sumit obj1 = (Sumit) factory.getBean("sumit");
+//		obj1.coding();
+////     obj1.age;// by default value is 0
+//		obj1.age = 39;
+//		System.out.println(obj1.age);// singleton = 39 , prototype = 39
+//
+//		Sumit obj2 = (Sumit) factory.getBean("sumit");
+//		obj2.coding();
+//		System.out.println(obj2.age); 
+		/*
+		 * singleton = 39 , prototype = 0// I am not set age for obj2, but spring
+		 * give the 39, because spring have object of age, spring will not creating
+		 * again for me, it's simply return that, This process is called singleTon
+		 * bean By default spring follow singlet design pattern
+		 */		
+		/*
+		 * In singleTon spring create object for you even if don’t need, but In
+		 * prototype when you aks for object spring create, if don’t need, it doesn’t
+		 * create the object for you
+		 */
+//		property tag
+		
+		
+		Sumit obj1 = (Sumit) factory.getBean("sumit");
+		obj1.coding();
+		System.out.println(obj1.getAge());
+	}
+}

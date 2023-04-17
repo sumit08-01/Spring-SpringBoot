@@ -1,0 +1,10 @@
+package com.spring.CoreSpring_1;
+
+public class Sumit {
+
+	public void coding() {
+		System.out.println("Sumit Coding");
+	}
+
+	
+}
