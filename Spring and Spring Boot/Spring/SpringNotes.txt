@@ -1,0 +1,310 @@
+				24-08-2022
+1->Introduction Of Spring-
+---------------------------------------
+Objective:
+>Introduction Spring as a FrameWork
+>Exploring Features of Spring
+>Undetstanding Architecture of Spring
+>Various Modules
+---------------------------
+What is Spring?
+>Spring1.0- realsed in march,2004(By Rod Johnson & Juergen Holler), as a J2EE
+>The current version is Spring is 5.3.19 as 13th april 2022
+>Is a popular open source application framework that can make J2EE development easier
+by enabling a POJO_based programming model
+>Consists of
+>> a container 
+>> a framework for managing components
+>> and a set of snap-in-services for 
+>> web user interface, Transaction, and persistence
+------------------------------------------
+Why Spring?
+>The essence of spring is in providing enterprise services services to plain old java object
+(POJO's)
+>Application built using spring sre very easy to unit test
+>Spring can eliminate the need to use a variety of custom properties files formats, by
+handling configuration in a consistent way throughtout applications and projects
+>Spring can provide an alternative to EJB(enteprise java beans) that's appropriate for many applications
+>Spring provides a consistent framework for data acces, whether using JDBC or an
+O/R mapping product such as TopLink, Hibernate or a JDO implementaion.
+--------------------------------------------
+Spring==J2EE Application server?
+-------------
+>Spring is NOT a J2EE Application server
+>Spring can nicely integrate with J2EE Application servers(or any java environment)
+>Spring can elegantly replace the services traditionally provided by j2ee application server
+>spring provides elegant integration points with:
+>>JDO
+>>EJB
+>>RMI
+>>WEB Server
+>>JMS
+------------------------------------------------------------
+Features-->>
+
+>it is a lightweight framwork
+>There is no dependency on the framwork - uses POJO based programming model
+>Spring does not reinvent the wheel, Instead it makes all the existing solution easier to use
+>Spring is based on Dependency Injection flavor of inversion of control
+>Spring includes a proxy based AOP(Aspect Oriented Programming) framework
+>Spring does not provide its own ORM mapping framework.
+>>Spring integrates well with all leading O/R mapping framework like hibernate, Toplinks , JDP, Apcahe OJB, etc
+>It also integrates with a variety of web framwork like struts, webwork, Spring MVC,
+Tapestry , JSP,etc.
+-------------------------------
+Objective:
+
+<This module is aimed at:
+>>Spring Containers
+>>Bean Configuration File and its content
+>>Inversion of Control methodologies
+>>>Setter Injection
+>>>Contructor Injection
+
+------------------------
+Core Spring:
+
+>The core spring can be thought of a Framework and a Container for managing
+Business objects and their relationship.
+>The Beauty of the Framework is that, in most of the times we don't need to depend on spring specific Classes and Interface.
+>>This us unlike other Framework, where they will force the client Application to depends in their property Implenentations
+>Business Components in Spring are POJO(Plain Old Java Object) or POJI(Plain old java interface)
+--------------------------------------
+BeanFactory VS ApplicationContext:
+
+>There are two ways in which client can use the functionality of the spring Framework:
+>>BeanFactory
+>>ApplicationContext
+>Two of the most in fundamental and important packages in spring are:
+>>org.springframework.beans
+>>org.springframework.context
+>Code In these packages provides the basis for Spring's Inversion of Control - IOC(alternately called DEPENDENCY INJECTION) features.
+>The BeanFactory provides a configuration mechanism-capable of managing beans(objects) of any nature, using potentially any kind of storage facility.
+>The ApplicationContext builds on top of the BeanFactory and adds other functionally such as:
+>>easier integration with Spring AOP features
+>>message resources handling(for use in Internationalization)
+>>event propagation
+>>declarative mechanisms to create the ApplicationContext
+>>application-layer specific context such as the WebApplicationContext
+>In SHORT:
+>>The BeanFactory provides the configuration framework and basis functionality 
+>>The ApplicationContext adds enhanced capabilities to it, some of them perhaps more J2EE and enterprise-centric.
+--------------------------------------------------------------------------------------
+Spring Core API:
+>the core API in spring is very limited and it generally involves in:
+>>Configuring
+>>Creating
+>>and Making Association
+Between various Business Components.
+>Spring refers to these Business Components as Beans
+>The following are core classes or the interface that are available in the spring for achieving the goal.
+>>Resource
+>>BeanFactory
+-------------------------------------------------------------------------
+Resource:
+>Interface for a resource descriptor that abstracts from the actual type of underlying resource,
+such as a file or class path resource
+>Package:org.springframework.core.io
+>Various classes which provide concrete implementation of"Resource"are:
+>>FileSystemResource
+>>ClassPathResource
+>>UrlResource
+>>ByteArrayResource
+>>InputStreamResource
+>>ServletContextResource
+--------------------------------------------------------------------------
+Resource--sample Code:
+Example:
+String xmlFile=("./resource/myXml.xml");
+Resource xmlResource = new FileSystemResource(xmlFile);
+--------------------------------------------------------------------
+Bean Factory:
+>The BeanFactory provide an advanced configuration mechanism capable of managing beans(object)of any nature
+>The BeanFactory is the actual Container which instantiates, configure, and manages a number of beans.
+>>These beans typically collacborate with one another, and thus have dependencies between themselves.
+>>These dependencies are reflected in the configure data used by the BeanFactory
+>A BeanFactory is represented by the inteface org.springframework.beans.factory.BeanFactory, for which 
+there are multiple inplementations.
+>>The most commonly used simple BeanFactory implementation is org.springframework.beans.factory.xml.XmlBeanFactory
+-------------------------------------------------------------------------------
+BeanFactory and Resource Example:
+Resource xmlResource = new FileSytemResource("beans.xml");
+BeanFactory factory = new XmlBeanFactory(xmlResource);
+---------------------------------------------------------------
+			(25/08/2022)
+Bean Definition Configuration File-
+>All the basic difinition of the Bean classes along with the configuration information,their
+relationships with other Bean object can be defined in the Xml Configuration File
+>The major configuration features:
+>>Making Association between Bean Objects
+>>>using the 'ref' element through the property bean
+>>Mapping Collection Properties
+>>>By including various Collection properties
+>>Importing Configuration Files into a master xml file
+>>>E.h.:<beans>
+	<import resource = "emp.xml"/>
+	<import resource = "address.xml"/>
+	</beans>
+---------------------------------------------------------------
+INVERSION OF CONTROL->(IOC)
+
+>The Framework insists that Associations between Businees objects should be externalized
+>>and never the client Application should be involved in doing these kinds of activities
+>Component Wiring is a fancy term given to make associaton betweem various Components
+>Instead of clinet having the control to esrablish relationship betweem components and manager the
+lifecycle od the beans, now Framework carries this job
+>>which means that the control is reversed from clients to Framework
+>>that's why this principle is called as IOC.
+>spring is most closely identified with flavor of IOC Known as DEPENDENCY INJECTION
+>DEPENDENCY INJECTION is a form of IOC that removes explicit dependence on container APIs
+>>ordinary java methods are used to inject dependencies such as collaborating
+objects or configuration values into application object instances
+>The two major flavour of Dependency injection are
+>> Setter Injection (Injection via javaBean Setter)
+>>Constructor Injection(injection via constructor arguments).
+
+-----------------------------------------
+DEPENDENCY INJECTION(Contd.)->
+
+There are two types of DEpendency Injection(DI) techinques we can use:
+>Setter Injection 
+>>Using setter methods in a bean class, the spring IOC container will inject the dependencies.
+
+>Contructor Injection 
+>>The constructor will take arguments based on number of dependencies required.
+>>You don't have option to reconfigure the dependencies at later point of time, since all the
+  dependencies are resolved only at the time of invoking the constructor.
+
+>>E.g.:
+	<constructor=arg index="0" type="java.lang.String" value="MyName"/>
+					
+------------------------------------------------
+				(26-08-2022)
+By default scope is singleton
+we can change it singleton to prototype with the help of scope property
+-------------------------------------------------
+Auto-wiring->
+>Component wiring is done manually by using the "ref" element in the Spring bean configuration
+file.
+>if you want to use ther auto-wiring facaility available with Spring, you can opt for few option like below:
+>>autowire="byName" : Spring will auto-wire the bean which has the same "id" as the property name.
+>>autowire="byType" : Spring will auto-wire a single/unique bean which is of the same type(class) as the property
+(class=type)
+-------------------------------------------------------------
+				(29-08-2022)
+Spring AOP(Aspect Oriented Programming)
+
+
+OBJECTIVE:>Introducing AOP->Provides for simplified application of cross-Cutting concerns
+
+---------------------------------------------------------------------------------------
+				(30-08-2022)
+
+1.>@Configuration: One of the most important annotation of spring. This annotation implies that, this class will contains bean definition methods.
+
+2.>@bean : annotaion is applied on a methos meaning, this method will return a bean of a particular
+	type which will be then managed by your spring context (container)
+
+3.>@Autowired: Spring annotation meaning the object will be automatically wired and injected
+4.>@Resource:
+5.>@Qualifier:
+5.>@Resources(name="")
+
+-----------------------------------------------------------------------
+				(01-09-2022)
+				Spring MVC->
+OverView->
+->MVC->Model-view-controller
+->Pattern helps to clearly separates bussiness, navigation and presentation logic
+->Proven mechanism for buliding a thin & clean web-tier
+->Three core collaborating components
+->>Controller
+	->Hanles navigation logic and interacts with the service tier for bussiness logic
+->>Model
+	->Handles the business logic and data
+->> view
+	->Renders the respones to the request
+	->Pulls data from the model
+
+MVC In Spring---------->>>>>>>>>>
+->A single FRONT CONTROLLER servlet that dispatches request to individual contollers
+	->Proven pattern show in Struts and core J2EE Patterns
+	->Request routing is completely controlled by the front Controller
+	->Individual Controllers can be used to handler many different URLs
+->Controllers are Classes of java
+	->Controllers are managed exactly like any other bean in the Spring Application Context
+
+
+CORE COMPONENTS OF SPRING MVC----->>>>>>>>>
+->DispatcherServlet
+	->Spring's Front Controller implementation
+->Contoller
+	->User created component for handling requests
+	->Encapsulates navigation ligic
+	->Delegates to the service object for bussiness logic
+	->The defalut handler is very simple CONTOLLER interface with method:
+		ModelAndView HANDLEREQUEST(request, response).
+->View
+	->Responsible for rendering output
+->ModelAndView
+	->Created by the controller
+	->Stores the Model data
+	->Associates a view to request(usually a logic view names)
+	->The modelAndView class is simply a container by which the model may be transported
+		to and exposed by the view.
+->ViewResolver
+	->Used to map logic view names to actual View implementations
+	->Used in Respones phase
+		ex-> prefix: /web/jsp
+		     suffix: .jsp
+		
+		logical view name that is part of the ModelAndView object?-->>"Success"
+	PrefixLogical-view-namesuffix
+	
+	logical view name "Success" gets mapped to the physical view name "/web/jsp/Success.jsp"
+
+->HandlerMapping
+	->Strategy inteface used by DispatcherServlet
+	->for mapping incoming requests to individual Controller
+	->Used in Request phase
+ex-> /request---->>>C1
+     /Shopping---->>>C2
+	
+
+CONFIGURING SPRING-MVC APPLICATION---------->>>>>
+->Configure DispatcherServlet in web.xml and establish URL mapping for it.
+	E.g.:
+		<Servlet>
+		<Servlet-name>springweb</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		</servlet>
+->spring configuration metadata in a configuration file named[servlet-name]-servlet.xml in the WEB-INF directory of your web application
+	E.g.:the DispatcherServlet defined in web.xml with name as springweb, will look for the 
+		configuration file/WEB-INF/springweb-servlet.xml
+->When a request is submitted to the server, DispatcherServlet looks in springweb-servlet.xml
+ for a mapping of the specified URL to some controller bean.
+->This is done by using a BeanNameUrlHandlerMapping class by default.
+	->There are other mapping handlers that you can specify instead of the defalut.
+		(SimpleUrl
+
+
+CONTROLLER(S) IN SPRING-MVC---------->>>>>>>>>>
+->spring's web MVC framework is designed around a Dispatcher 
+
+steps->
+1->new->Dyanmicwenpro->prName->serveradd->next->src->click check box xml -> finish
+
+
+2->jar file in lib folder
+
+3->configure DispatcherControl(frontControl) add in web.xml
+
+
+JFS-T1-Java-Backend-Quick-Assessment-02-Sept-2022
+https://app.codility.com/public-link/Wipro-Limited-JFS-T1-Java-Backend-Quick-Assessment/
+
+
+
+
+
+

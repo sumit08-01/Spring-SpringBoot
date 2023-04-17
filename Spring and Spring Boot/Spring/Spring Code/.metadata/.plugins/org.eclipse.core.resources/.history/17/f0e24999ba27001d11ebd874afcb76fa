@@ -1,0 +1,6 @@
+package com.Spring.newPakageName;
+
+public class Address {
+		private String street;
+		private String city;
+}

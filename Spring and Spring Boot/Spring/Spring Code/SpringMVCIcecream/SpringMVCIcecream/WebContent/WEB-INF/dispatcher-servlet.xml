@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="simpleUrlMapping"
+          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/login.html">icecreamController</prop>
+            </props>
+        </property>
+    </bean>
+
+
+
+    <bean id="icecreamController"
+          class="IcecreamController">
+        <property name="sessionForm">
+            <value>true</value>
+        </property>
+        <property name="commandName">
+            <value>icecream</value>
+        </property>
+        <property name="commandClass">
+            <value>Icecream</value>
+        </property>
+        <property name="formView">
+            <value>login</value>
+        </property>        
+        <property name="successView">
+            <value>icecream</value>
+        </property>      </bean>
+
+
+    <bean id="viewResolver"
+     class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        
+        <property name="prefix">
+            <value>/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+</beans>
+
+

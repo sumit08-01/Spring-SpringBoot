@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\JavaNotes1\SpringSecurity"/>
+			<item value="C:\Users\SU20350495\Downloads\Cars"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\carchoiceapp"/>
+			<item value="C:\Users\SU20350495\Downloads\CapstoneProject"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\MovFlix"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\MoviesAPIWithSecurity"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\MoviesAPIWithSwagger"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\MoviesAPIWithTestCases"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\MoviesAPIWithTestCases\MoviesAPIWithTestCases"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\MoviesAPI"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\SpringBoot1to1DatabaseH2 (1)"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\Assignment4"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\dataBaseDemo1toM"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\dataBaseDemo"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Boot\Codes\SpringBootDatabaseH2"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

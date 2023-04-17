@@ -1,0 +1,28 @@
+----------STEPS TO MAKE SPRING BOOT APPLICATION-----------
+
+
+1-->>Go to this web site to (https://start.spring.io/)
+
+Spring Boot-->>3.0.0 (SNAPSHOT)3.0.0 (M4)2.7.4 (SNAPSHOT)2.7.32.6.12 (SNAPSHOT)2.6.11
+
+Project Metadata-->>
+Group-->>com.firstSpringBootProgram
+
+Artifact-->>firstSpringBootProgram
+
+Name-->>firstSpringBootProgram
+
+Description-->>Demo project for Spring Boot
+
+Package name-->>com.firstSpringBootProgram.firstSpringBootProgram
+
+Packaging-->>Jar(with embedded server tomcat), War(without server)
+
+Java Version-->>18,17,11,8
+
+DependenciesADD DEPENDENCIES-->>Spring Web WEB(Add dependencies)
+Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
+
+2-->>After downloaded .zip file, extract it by clicking right on mouse.
+3-->>Now open your IDE click on File-->>Import-->>serach (Existing Maven Project)-->>next-->>Browse Your Extract zip file and add and -->>Finish
+4-->>After import it downloaded some external files and you good to go.
