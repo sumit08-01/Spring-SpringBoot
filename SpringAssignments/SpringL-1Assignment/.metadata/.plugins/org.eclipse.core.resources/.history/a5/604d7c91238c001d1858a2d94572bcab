@@ -1,0 +1,19 @@
+package com.assignment4;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan
+public class StudentConfig {
+
+	@Bean
+	public Student getStudent1() {
+		return new Student();
+	}
+	
+	@Bean
+	public Student getStudent2() {
+		return new Student();
+	}
+	
+}

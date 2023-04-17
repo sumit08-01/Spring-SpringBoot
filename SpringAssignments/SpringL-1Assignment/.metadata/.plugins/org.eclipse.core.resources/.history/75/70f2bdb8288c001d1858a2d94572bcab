@@ -1,0 +1,6 @@
+package com.assignment4;
+
+public class Snippet {
+	Student student = new Student();
+}
+

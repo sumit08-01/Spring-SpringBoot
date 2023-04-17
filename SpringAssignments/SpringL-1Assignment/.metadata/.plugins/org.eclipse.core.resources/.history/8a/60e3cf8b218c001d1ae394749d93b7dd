@@ -1,0 +1,7 @@
+package com.assignment4;
+
+@Con
+public class StudentConfig {
+
+	
+}

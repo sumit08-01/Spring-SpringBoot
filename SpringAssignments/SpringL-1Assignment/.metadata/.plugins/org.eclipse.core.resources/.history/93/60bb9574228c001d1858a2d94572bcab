@@ -1,0 +1,9 @@
+package com.assignment4;
+
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan
+public class StudentConfig {
+
+	
+}

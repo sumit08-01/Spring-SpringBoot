@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="Student" class="com.assignment4.Student">
+		<property name="studentId" value="101"></property>
+		<property name="studentName" value="Sumit"></property>
+		<property name="test">
+			<list>
+				<bean class="com.assignment4.Test">
+					<property name="testId" value="1001"></property>
+					<property name="testTitle" value="java core"></property>
+					<property name="testMarks" value="99"></property>
+				</bean>
+				<bean  class="com.assignment4.Test">
+					<property name="testId" value="1002"></property>
+					<property name="testTitle" value="spring core"></property>
+					<property name="testMarks" value="100"></property>
+				</bean>
+			</list>
+		</property>
+
+	</bean>
+	<bean id="Student" class="com.assignment4.Student">
+		<property name="studentId" value="102"></property>
+		<property name="studentName" value="sourabh"></property>
+		<property name="test">
+			<list>
+				<bean class="com.assignment4.Test">
+					<property name="testId" value="1003"></property>
+					<property name="testTitle" value="js core"></property>
+					<property name="testMarks" value="35"></property>
+				</bean>
+			</list>
+		</property>
+
+	</bean>
+</beans>

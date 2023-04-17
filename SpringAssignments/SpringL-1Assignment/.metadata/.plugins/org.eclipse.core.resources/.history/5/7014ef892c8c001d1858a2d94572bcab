@@ -1,0 +1,49 @@
+package com.assignment4;
+
+public class Test {
+
+	private String testId;
+	private String testTitle;
+	private String testMarks;
+	
+	public Test() {
+	}
+
+	public Test(String testId, String testTitle, String testMarks) {
+		super();
+		this.testId = testId;
+		this.testTitle = testTitle;
+		this.testMarks = testMarks;
+	}
+
+	public String getTestId() {
+		return testId;
+	}
+
+	public void setTestId(String testId) {
+		this.testId = testId;
+	}
+
+	public String getTestTitle() {
+		return testTitle;
+	}
+
+	public void setTestTitle(String testTitle) {
+		this.testTitle = testTitle;
+	}
+
+	public String getTestMarks() {
+		return testMarks;
+	}
+
+	public void setTestMarks(String testMarks) {
+		this.testMarks = testMarks;
+	}
+
+	@Override
+	public String toString() {
+		return "Test [testId=" + testId + ", testTitle=" + testTitle + ", testMarks=" + testMarks + "]";
+	}
+	
+	
+}

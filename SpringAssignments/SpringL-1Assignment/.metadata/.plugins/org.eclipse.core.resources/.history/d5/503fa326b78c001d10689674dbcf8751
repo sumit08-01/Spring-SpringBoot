@@ -1,0 +1,13 @@
+package com.assignment5;
+
+import java.util.List;
+
+public class PlayerConfig {
+
+	public Player getPlayer1() {
+		Country country = List.of( new Player("IN101", "India"));
+		Player player = new Player();
+		return player;
+		
+	}
+}

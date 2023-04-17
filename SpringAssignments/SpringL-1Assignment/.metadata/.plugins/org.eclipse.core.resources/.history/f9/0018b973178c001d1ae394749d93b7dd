@@ -1,0 +1,15 @@
+package com.assignment3;
+
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+
+@Configurable
+public class MovieConfig {
+
+	@Bean
+	public Movie getMovie() {
+		return null;
+		
+	}
+}

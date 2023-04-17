@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/sumit/OneDrive/Desktop/Spring-And-SB-Assignments/SpringL-1Assignment/Dependencies/Spring Core 6.0.3 Jar/spring-aop-6.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/OneDrive/Desktop/Spring-And-SB-Assignments/SpringL-1Assignment/Dependencies/Spring Core 6.0.3 Jar/spring-beans-6.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/OneDrive/Desktop/Spring-And-SB-Assignments/SpringL-1Assignment/Dependencies/Spring Core 6.0.3 Jar/spring-context-6.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/OneDrive/Desktop/Spring-And-SB-Assignments/SpringL-1Assignment/Dependencies/Spring Core 6.0.3 Jar/spring-core-6.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/OneDrive/Desktop/Spring-And-SB-Assignments/SpringL-1Assignment/Dependencies/Spring Core 6.0.3 Jar/spring-expression-6.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/OneDrive/Desktop/Spring-And-SB-Assignments/SpringL-1Assignment/Dependencies/Spring Core 6.0.3 Jar/spring-jcl-6.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/OneDrive/Desktop/Spring-And-SB-Assignments/SpringL-1Assignment/Dependencies/Javax Annotation Api/javax.annotation.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

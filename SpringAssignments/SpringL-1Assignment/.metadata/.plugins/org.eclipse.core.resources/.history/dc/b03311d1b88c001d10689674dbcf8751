@@ -1,0 +1,16 @@
+package com.assignment5;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PlayerConfig.class);
+		Player player = context.getBean("p1", Player.class);
+		System.out.println(player);
+		context.close();
+		
+	}
+
+}

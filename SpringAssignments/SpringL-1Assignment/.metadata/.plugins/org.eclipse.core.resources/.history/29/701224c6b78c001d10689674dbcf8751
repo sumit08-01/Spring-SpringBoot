@@ -1,0 +1,20 @@
+package com.assignment5;
+
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com")
+public class PlayerConfig {
+
+	@Bean(name = "p1")
+	public Player getPlayer1() {
+		List<Country> countries  = List.of(new Country("IN101", "India"));
+		Player player = new Player("R1001", "Rohit", countries);
+		return player;
+		
+	}
+}

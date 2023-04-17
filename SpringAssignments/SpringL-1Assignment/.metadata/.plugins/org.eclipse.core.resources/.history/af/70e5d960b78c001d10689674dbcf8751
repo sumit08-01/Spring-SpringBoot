@@ -1,0 +1,13 @@
+package com.assignment5;
+
+import java.util.List;
+
+public class PlayerConfig {
+
+	public Player getPlayer1() {
+		List<Country> countries  = List.of();
+		Player player = new Player();
+		return player;
+		
+	}
+}
