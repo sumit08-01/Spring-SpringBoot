@@ -1,0 +1,133 @@
+Stand-alone-->>
+POM-->>xml-->>Project object module-->>Colloection of classes,annotationn, starter module
+
+https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-starters
+
+--------------------------------------------------------
+https://start.spring.io/--->>>Projet(Maven)-->>Lang(Java)-->>springBootVersion(2.7.3)-->>Metadata
+(
+Grp-->>Com.wipro
+artifact -->>SpringBootFirst
+Name-->>SpringBootFirst
+Desc-->>First project for spring Boot
+packages Name-->com.wipro
+pack-->>jar
+jave vession-1.8
+)
+Dependencies-->>Add Depe-->>search Web(Spring Web)-add  | depe-->search JDBC(JDBC API)
+Click on Generate--its download a zip file--and unzip it(extract)
+------------------
+and now exrtact project in IDE
+file-->>Export-->>Maven project-->>extract-->>
+
+---------------
+Quiz--1
+1->SB
+2->opinaited
+3->starter
+4->pom.xml
+5->ubar-jar, 
+6->SpringBootApplication
+7->data
+8->Spring Initilizer
+9->actuator
+10->Health
+11->edit in application.pro
+12->Management
+13->*
+14->devTools(add dependency )
+15->live reload plugin
+16->Thymleaf,@controler
+17->src/main/resources/template
+18->yes-->>property->spring.thymeleaf.prefix=classpath://  & 
+18.1->ModelAndView
+19->1(Jaspare), 2(jstl)
+20->Class based
+21->exclide tocat add jetty
+22->package as WAR
+(1.add pakage war,tocat has to be speciifed
+2.servletInitilaizer)
+23->spring Data
+24->steps in notes
+25->h2
+-------------------------
+Xmlns:th=>-n->name, s->space
+th->alies
+---------------------
+Thymelife-->>https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html
+---------------------------
+-->>>JAVA CLASS BASED CONFIG --->>>MORE PRESEDENCEY
+---------------------------------------
+
+CRUD->Create read update delete
+
+crudRepositroy
+jpaRepositroy
+---------------------------
+----------------Spring JDBC---------------
+Steps
+
+step-1
+Create the project start.spring.io/
+a->add dependency -JPS
+b->add data base-h2
+c->add MySql database
+
+step-2
+a->Create Entity Class(IMG in folder)
+
+step-3
+a.create Repository interface that extends CrudRepository->
+	public inteface AccountRepository extends CrudRepository<Account,Long>
+
+b.Also add custome method
+
+step-4
+a.add datasource details in application.propreties file
+
+step-5
+write controller class
+
+step-6
+Runable class
+
+step-7
+Run Project
+
+
+
+C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib
+---------------------------------------------------------------------------
+
+--------------------12-09-22----------------------------
+
+Invoice , Product 
+
+One to many
+
+1. Spring boot app with spring data JPA and H2 dependecies
+
+2. application.properties-->>datasource, h2, hibernate realted properties
+
+3. Entities -->> Invoice-->>InvoiceId, inDate, inVAmount,list products
+		 product -->> productId, productname, productprice
+
+4.InvoiceRepost,ProductRepository
+
+
+
+--------------------------------------------------
+WSDL->
+UUDI-universal describe
+
+
+
+
+
+
+
+
+
+
+
+

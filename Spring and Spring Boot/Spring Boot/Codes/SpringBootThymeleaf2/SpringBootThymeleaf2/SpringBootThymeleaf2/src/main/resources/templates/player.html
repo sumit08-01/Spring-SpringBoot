@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body bgcolor="springgreen">
+
+Fav. Player  is: <span th:text="${player}"></span> <BR>
+
+Fav. Player is: <span th:inline="text">[[${player}]]</span> <BR>
+
+Fav. Player is: <span data-th-text="${player}" />
+
+
+</body>
+</html>

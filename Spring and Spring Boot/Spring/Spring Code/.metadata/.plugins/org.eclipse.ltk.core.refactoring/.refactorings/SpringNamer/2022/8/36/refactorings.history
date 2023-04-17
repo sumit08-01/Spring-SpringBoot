@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;app.xml&apos; to &apos;com.springcore.lifeCycle/src/com.springcore.LifeCycle&apos;&#x0D;&#x0A;- Original project: &apos;SpringNamer&apos;&#x0D;&#x0A;- Destination element: &apos;com.springcore.lifeCycle/src/com.springcore.LifeCycle&apos;&#x0D;&#x0A;- Original element: &apos;app.xml&apos;" description="Copy file" destination="=com.springcore.lifeCycle/src&lt;com.springcore.LifeCycle" element1="SpringNamer/src/app.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1661786569703" units="0" version="1.0"/>
+</session>

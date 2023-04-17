@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+
+<body bgColor="lightgreen" align="center">
+
+<form action="getByPrice" method="post">
+	<h1>BestChoice Cars </h1> 
+	<h2>Choose price range to find available cars</h2>
+	
+	<table align="center">
+			<tr>
+				<td><input type="radio" name="price"  value="490000"></td>
+				<td><p><5lakhs</p></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="price" value="500001"></td>
+				<td><p> >5lakhs</p></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Find Your Car"></td>
+				<td><a href="/"><input type="button" value="Back"></a></td>
+			</tr>
+		</table>
+</form>
+
+
+</body>
+</html>

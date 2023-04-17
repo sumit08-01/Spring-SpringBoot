@@ -1,0 +1,164 @@
+package com.movFlix;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+
+@Controller
+public class MovieController {
+	
+	
+	@Autowired
+	MovieRepo movierepo;
+	
+
+//-------------------ADD Movies IN DB----------------------------
+	
+	@PostConstruct
+	public void init() {
+		
+		Movie m1 = new Movie("M001","The Mummy",3000000);
+		Movie m2 = new Movie("M002","The Firm",2000000);
+		Movie m3 = new Movie("M003","Mr.Bean",2500000);
+		Movie m4 = new Movie("M004","Logan",2500000);
+		Movie m5 = new Movie("M005","The Avenger : Age of Ultron",6000000);
+		Movie m6 = new Movie("M006","The Gun",2000000);
+		Movie m7 = new Movie("M007","Moana",4000000);
+		Movie m8 = new Movie("M008","Finding Nemo",5500000);
+		Movie m9 = new Movie("M009","The Mummy Returns",9000000);
+		Movie m10 = new Movie("M0010","Star Wars",7000000);
+		
+		
+		List<Movie> movie = new ArrayList<Movie>();
+		
+		movie.add(m1);
+		movie.add(m2);
+		movie.add(m3);
+		movie.add(m4);
+		movie.add(m5);
+		movie.add(m6);
+		movie.add(m7);
+		movie.add(m8);
+		movie.add(m9);
+		movie.add(m10);
+		
+		movierepo.saveAll(movie);
+		
+	}
+	
+//----------------------GET MOVIE BY ID-----------------
+	
+	
+	@RequestMapping(value="/getMovieById", method = RequestMethod.POST)
+	public String searchById(@ModelAttribute("movieId") String movieId,Model m) {
+		
+			String movieIdN = movieId.toUpperCase();
+			
+		List<Movie> movies = movierepo.findByMovieId(movieIdN);
+		m.addAttribute("movies", movies);
+//		List<Movie> movies = movierepo.findByMovieIdAndMovieName("M001", "The Mummy");
+//		List<Movie> movies = movierepo.findByMovieIdOrMovieName(null,"The Mummy");
+		System.out.println(movies);
+//		System.out.println(movies.get(0).getMovieId());
+//		System.out.println(movies.get(0)+"75");
+//		System.out.println(movieId +" no 76");
+//		
+//		String[] str = (String[]) movies.toArray()[0];
+//		System.out.println((String[]) movies.toArray()[0]);
+//		System.out.println(movies.get(0).getMovieId().valueOf(movieId) + "  79");
+		System.out.println(movies.indexOf(movieIdN));
+		if (   movieIdN.equals(movies.indexOf(movieIdN))     )  {
+			
+			return "errorPage";
+			
+		}
+		return"getMovieById";
+			
+	}
+
+
+//	@GetMapping("/MovieById")
+//	public String get(Model m) {
+//		m.addAttribute("movies", movierepo.findAll());
+//		return "getMovieById";
+//	}
+	
+	
+//----------------------GET MOVIE BY Name-----------------------
+	
+	@RequestMapping(value="/getMovieByName", method = RequestMethod.POST)
+	
+	public String searchByName(@ModelAttribute("movieName") String movieName,Model m) {
+		
+		String movieIdN = movieName.toUpperCase();
+		System.out.println(movieIdN);
+		
+		List<Movie> movies = movierepo.findByMovieName(movieName);
+//		System.out.println(movies.get(0).getMovieName().matches(movieName));
+		String st = movies.get(0).getMovieName().toString().toUpperCase();
+		System.out.println(st);
+		
+		
+		if(   movieIdN.equalsIgnoreCase(movies.get(0).getMovieName().toString())    ) {
+			
+			m.addAttribute("movies", movies);
+			
+			return "getMovieByName";
+		
+		}
+		return "errorPage";
+		
+	}
+	
+//----------------------GET MOVIE BY Collection-----------------
+	@RequestMapping(value="/getMovieByC", method = RequestMethod.POST)
+	public String searchByCollection(@ModelAttribute("C1") int C1,@ModelAttribute("C2") int C2, Model m) {
+		System.out.println(C1 + " "+ C2);
+		List<Movie> movies = movierepo.findByMovieCollection(C1);
+		System.out.println(movies);
+		m.addAttribute("movies",movies);
+		return "getMovieByC";
+		
+	}
+	
+//------------------ADDING Single MOVIE IN DB---------------------------
+	@RequestMapping(value="/addMovie", method = RequestMethod.POST)
+	public String addMoviesInH2(@ModelAttribute("movieId") String movieId, @ModelAttribute("movieName") String movieName, @ModelAttribute("movieC") int movieC ) {
+		Movie m = new Movie(movieId,movieName,movieC);
+		movierepo.save(m);
+		return "addMovieSuccess";
+		
+	}
+	
+	
+//-------------------ADMIN CREDENTIALS----------------------------
+	
+	@RequestMapping(value="/movieAdmin", method = RequestMethod.POST)
+	public String CheckCredentails(@ModelAttribute("email") String email, @ModelAttribute("pwd") String pwd)
+	{
+			
+		if(("s").equalsIgnoreCase(email) && ("s").equalsIgnoreCase(pwd)) {
+			
+			return "movieAdmin";
+		}
+		else {
+			return "worngCredentails";
+		}
+	}
+	
+
+	
+}

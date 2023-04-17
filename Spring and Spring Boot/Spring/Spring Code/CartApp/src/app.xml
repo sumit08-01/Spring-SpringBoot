@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+       <bean id="incoiceId" class="com.app.Invoice">
+       <property name="invoiceID" value="101"></property>
+       <property name="pList" >
+       		<list>
+       		<ref bean="Product1"/>
+       		<ref bean="Product2"/>
+       		</list>
+       </property>
+       
+       </bean>
+       <bean id="Product1" class="com.app.Product">
+       	<property name="productId" value="1001"></property>
+       	<property name="productName" value="T-shirt"></property>
+       	<property name="productPrice" value="699.00"></property>
+       </bean>
+       
+       <bean id="Product2" class="com.app.Product">
+       	<property name="productId" value="1002"></property>
+       	<property name="productName" value="shirt"></property>
+       	<property name="productPrice" value="749.00"></property>
+       </bean>
+       
+</beans>

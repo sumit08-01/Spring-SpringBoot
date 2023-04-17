@@ -1,0 +1,38 @@
+1. we created a dynamic web project (we are using Tomcat as my App Server)
+
+2. in the "lib" folder we have to add all the spring & springMVC related jar files
+
+3. we have to configure the contextLoader, DispatcherServlet etc., in the web.xml file
+
+4. we have to create the corresponding dispatcher-servlet.xml file which is the configuration file that will be referred 
+by the DispatcherServlet (This file should contain the details of the handlerMapping class, view resolver class and the Controllers which are part of this app....)
+
+5. We created our Model class called "Icecream". Which has one property called "flavour". 
+
+6. We created a bean entry for the Icecream Model class in the /WEB-INF/applicationContext.xml file. 
+According to our web.xml file's contextLoader parameters, the contextLoader will load the WebApplicationContext container and 
+the container will refer to the applicationContext.xml file and then create the appr. beans mentioned in that file.
+
+7. We created our IcecreamController class which extends from SimpleFormController class and 
+overrides the method onSubmit() which just returns the ModelAndView object.
+
+8. We will continue the activity of step(4) above and we will configure the dispatcher-servlet.xml file now. 
+We have configured the HandlerMapping bean, controller bean, viewResolver bean.
+
+9. Now we will look at our views. 
+	a. In web.xml -> welcome file is "index.jsp"
+	b. index.jsp --> jsp:forward --> login.html
+	c. login.html --> will get mapped to /jsp/login.jsp (because of the VR)
+	d. login.jsp --> the user is entering the fav. flavour and submits the form. The form is bound to "icecream" bean and the text box to enter the fav. flovour is bound to "flavour" property.
+	e. Once flavour is entered by the user and submit happens, it goes to onSubmit method of the controller. (according to the HM, /login.html --> IcecreamController)
+	f. In IcecreamController onSubmit is returning ModelAndView object which contains the data as "icecream" data and logical view name is "icecream".
+	g. icecream logical view name gets mapped to "/jsp/icecream.jsp" where the icecream flavour entered by the user is displayed.
+
+		
+
+
+
+
+
+
+

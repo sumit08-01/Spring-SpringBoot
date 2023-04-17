@@ -1,0 +1,23 @@
+package com.springcore.LifeCycle;
+
+public class pepsi implement InitializingBean {
+	 private double price;
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public pepsi() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "pepsi [price=" + price + "]";
+	}
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringMVCIcecream"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringAOPAround"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringAOP (1)"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringAnnotationEg2"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringAnnotationEg1"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringAOP"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringNamer (1)"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringAutowiringEg"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringIOCContructorInjection"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringProductInvoice"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringIOCSetterInjection"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringTeamPlayer"/>
+			<item value="D:\Sumit(lecture Notes)\Spring(22-08-22)Training\Spring Code\SpringNamer"/>
+			<item value="C:\Users\SU20350495\Downloads\SpringNamer"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="32"/>
+		<item key="DIALOG_Y_ORIGIN" value="180"/>
+	</section>
+</section>
